@@ -1,3 +1,57 @@
+.FotoPerfil{
+  width: 50px !important;
+  border-radius: 50px !important;
+}
+
+.Post{
+  display: flex;
+  flex-direction: column;
+  margin-left: 27%;
+}
+
+.Post div{
+  display: flex;
+  flex-direction: row;
+}
+
+.Post div p{
+  margin-top: 0.8%;
+}
+
+.Post img{
+  border-radius: 10px;
+  width: 500px;
+  flex-shrink: 0;
+}
+
+.Post button{
+  width: 4%;
+  border: 0px;
+  background-color: #0B0E27;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonPost{
+  width: 30px !important;
+  border-radius: 400px;
+}
+
+h2{
+  color:  white;
+}
+
+
+.buttonPost:hover{
+  background-color: rgb(29, 154, 238);
+}
+
+.buttonPost:active{
+  background-color: rgb(153, 204, 238);
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;

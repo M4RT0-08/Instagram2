@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://api.thecatapi.com/v1/images/search';
+const BASE_URL = 'https://api.thecatapi.com/v1/images/search?limit=10';
 const API_KEY = 'live_6LIOP6DUHrKXIzBkZ2Pz6FwJ4RGnXIJCm0PTN5jqJL75HDPL16FwMMrgPbjCLtfO  ';
 
 const api = axios.create({

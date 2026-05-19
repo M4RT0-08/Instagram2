@@ -5,17 +5,20 @@ import { getCatImage } from './services/api.js'
 import './App.css'
 
 function App() {
-  const [imagen, setImagen] = useState("")
+  const [imagenes, setImagenes] = useState([])
 
   useEffect(() => {
     getCatImage().then((response) => {
-      setImagen(response.data[0].url)
+      setImagenes(response.data.slice(0, 10).map(img => img.url))
     })
   }, [])
 
   return (
     <>
-      <Post image={imagen} />
+      <h2>For you page</h2>
+      {imagenes.map((image, index) => (
+        <Post key={index} image={image} />
+      ))}
     </>
   )
 }
