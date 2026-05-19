@@ -1,3 +1,9 @@
+body {
+  background: linear-gradient(135deg, #0B0E27 0%, #1a1f3a 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
 .FotoPerfil{
   width: 50px !important;
   border-radius: 50px !important;
@@ -6,16 +12,22 @@
 .Post{
   display: flex;
   flex-direction: column;
-  margin-left: 27%;
+  margin: 2% auto;
+  max-width: 500px;
 }
 
 .Post div{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .Post div p{
-  margin-top: 0.8%;
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .Post img{
@@ -25,14 +37,18 @@
 }
 
 .Post button{
-  width: 4%;
+  width: auto;
+  padding: 8px;
   border: 0px;
-  background-color: #0B0E27;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .buttons{
   display: flex;
   flex-direction: row;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .buttonPost{
@@ -41,7 +57,46 @@
 }
 
 h2{
-  color:  white;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header h1{
+  color: white;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+header input {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2a3050;
+  border: 1px solid #3a4060;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  outline: none;
+  width: 200px;
+  font-size: 14px;
+}
+
+header input::placeholder {
+  color: #a0a8c0;
 }
 
 
