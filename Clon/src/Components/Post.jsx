@@ -24,3 +24,5 @@ function Post({ image }) {
 }
 
 export default Post
+
+/*DESCOMENTAR DESPUES DE HACER LA ZONA IZQ*/
