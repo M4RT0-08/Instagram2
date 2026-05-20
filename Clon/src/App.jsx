@@ -4,6 +4,7 @@ import Post from './Components/Post.jsx'
 import { getCatImage } from './services/api.js'
 import './App.css'
 import Header from './Components/Header.jsx'
+import Navegador from './Components/Navegador.jsx'
 
 function App() {
   const [imagenes, setImagenes] = useState([])
@@ -17,10 +18,16 @@ function App() {
   return (
     <>
     <Header />
+    <div className="col-sm-4">
+      <Navegador/>
+    </div>
+    <div className="col-sm-8">
       <h2>For you page</h2>
-      {imagenes.map((image, index) => (
+      {/*imagenes.map((image, index) => (
         <Post key={index} image={image} />
-      ))}
+      ))*/}
+    </div>
+      
     </>
   )
 }
