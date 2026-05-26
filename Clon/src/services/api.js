@@ -8,7 +8,7 @@ const api = axios.create({
 });
 
 export const getCatImage = () => {
-  return api.get('', {
-    
-  });
-};
+  const key = API_KEY && API_KEY.trim()
+  const headers = key ? { 'x-api-key': key } : {}
+  return api.get('', { headers })
+}

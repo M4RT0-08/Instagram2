@@ -8,8 +8,8 @@ import follow from '../assets/follow.png'
 import { FiUsers, FiHeart } from 'react-icons/fi'
 import { useState } from 'react'
 import '../App.css'
-
-function Navegador() {
+ 
+function Navegador({ onNavigate }) {
   const [isFollowing, setIsFollowing] = useState(false)
 
   const perfil = {
@@ -23,9 +23,11 @@ function Navegador() {
   return (
     <>
     <div className="navegador">
-    <img className="fotoPerfil" src={perfil.foto} alt="Foto de Perfil" />
-    <h2>{perfil.nombre} ✓</h2>
-    <p>{perfil.usuario}</p>
+    <div onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('profile') }} style={{cursor: 'pointer'}}>
+      <img className="fotoPerfil" src={perfil.foto} alt="Foto de Perfil" />
+      <h2>{perfil.nombre} ✓</h2>
+      <p>{perfil.usuario}</p>
+    </div>
     <div className="stats">
       <div className="stat">
         <FiUsers size={20} className="stat-icon-small" />
@@ -38,11 +40,11 @@ function Navegador() {
     </div>
 
     <div className="nav-menu">
-        <a href=""><img src={home} alt="" /> Home</a>
-        <a href=""><img src={bruj} alt="" /> Explore</a>
-        <a href=""><img src={reel} alt="" /> Reels</a>
-        <a href=""><img src={igtv} alt="" /> iGTV</a>
-        <a href=""><img src={noti} alt="" /> Notification</a>
+      <a href="" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('feed') }}><img src={home} alt="" /> Home</a>
+      <a href=""><img src={bruj} alt="" /> Explore</a>
+      <a href=""><img src={reel} alt="" /> Reels</a>
+      <a href=""><img src={igtv} alt="" /> iGTV</a>
+      <a href=""><img src={noti} alt="" /> Notification</a>
     </div>
     </div>
     </>
